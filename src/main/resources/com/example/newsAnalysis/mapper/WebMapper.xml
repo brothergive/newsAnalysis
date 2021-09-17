@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sql Mapper -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com/example/newsAnalysis/model/mapper">
+    <select id="getNewsByCondition" resultType="RankDayVO">
+        select *
+        from ranknews;
+    </select>
+
+    <select id="getCountUrlByDay" parameterType="Date" resultType="Map">
+        select rankdate, count(*) as cnt
+        from ranknews
+        where rankdate between #{stratDate} and #{endDate}
+        group by rankdate
+        order by rankdate;
+    </select>
+
+
+</mapper>

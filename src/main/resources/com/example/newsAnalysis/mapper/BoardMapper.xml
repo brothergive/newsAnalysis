@@ -7,7 +7,7 @@
         from ranknews;
     </select>
 
-    <select id="getList" resultType="com.example.newsAnalysis.domain.RankDayVO">
+    <select id="getList" resultType="com.example.newsAnalysis.model.RankDayVO">
         select *
         from ranknews;
     </select>

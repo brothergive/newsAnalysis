@@ -1,7 +1,7 @@
 package com.example.newsAnalysis.service;
 
 
-import com.example.newsAnalysis.domain.RankDayVO;
+import com.example.newsAnalysis.model.RankDayVO;
 import com.example.newsAnalysis.mapper.BoardMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

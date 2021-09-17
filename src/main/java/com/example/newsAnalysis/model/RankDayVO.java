@@ -1,9 +1,8 @@
-package com.example.newsAnalysis.domain;
+package com.example.newsAnalysis.model;
 
 import lombok.*;
 
 import java.util.Date;
-import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -12,7 +11,7 @@ import java.util.List;
 @ToString
 public class RankDayVO {
     private Date rankDate;
-    private List<NewsVO> newsVOList;
+    private int newsCount;
 
 }
 

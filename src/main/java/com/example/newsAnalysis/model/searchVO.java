@@ -1,21 +1,18 @@
-package com.example.newsAnalysis.domain;
+package com.example.newsAnalysis.model;
 
 import lombok.*;
 
 import java.util.Date;
-import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @ToString
-public class NewsVO {
+public class searchVO {
     private String title;
     private String author;
     private String classification;
     private Date newsDate;
-    private List<KeywordVO> keywordVOList;
-
 
 }

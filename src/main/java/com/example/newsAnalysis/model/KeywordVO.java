@@ -1,4 +1,4 @@
-package com.example.newsAnalysis.domain;
+package com.example.newsAnalysis.model;
 
 import lombok.*;
 
