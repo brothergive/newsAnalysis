@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Data
 @AllArgsConstructor
-public class collectionStatusVO {
+public class CollectionStatusVO {
     Date rankDate;
     int count;
 }

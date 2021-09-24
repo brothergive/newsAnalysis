@@ -7,9 +7,9 @@ import java.util.Date;
 
 @Data
 @AllArgsConstructor
-public class collectionDataInputVO {
-    Date startDate;
-    Date endDate;
+public class DataCollectionInputVO {
+    String startDate;
+    String endDate;
     String classification;
     String division;
     String searchKeyword;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>수집 데이터</title>
@@ -9,6 +10,49 @@
 
 <!--수집 현황-->
 수집 현황<br>
+<table class="table" border="1">
+    <tr>
+        <th>날짜</th>
+        <!--        여기서 날짜 관련 반복문-->
+        <td th:each="data:${dataStatus}">[[${data.rankDate.format(result.regDT,'yyyy-MM-dd HH:mm')}]]</td>
+        <td>1일</td>
+
+    </tr>
+    <tr>
+        <th>수집 건수</th>
+        <!--        여기서 건수 관련 반복문-->
+        <td th:each="data:${dataStatus}">[[${data.count}]]</td>
+        <td>50</td>
+    </tr>
+</table>
+<form th:action="@{view}" method="post">
+    <table>
+        <tr>
+            <th>
+                <input type="date" name="startDate" required="true">
+                <input type="date" name="endDate" required="true">
+                <select name="classification" required="true">
+                    <option value="">분류</option>
+                    <option value="사회">사회</option>
+                    <option value="정치">정치</option>
+                    <option value="경제">경제</option>
+                    <option value="문화">문화</option>
+                    <option value="IT">IT</option>
+                    <option value="기타">기타</option>
+                </select>
+                <select name="division" required="true">
+                    <option value="">구분</option>
+                    <option value="title">뉴스명</option>
+                    <option value="word">키워드</option>
+                    <option value="author">언론사</option>
+                </select>
+                <input type="text" name="searchKeyword" required="true" placeholder="검색어를 입력하세요">
+                <input type="submit" value="검색">
+            </th>
+        </tr>
+    </table>
+
+</form>
 
 
 </body>
